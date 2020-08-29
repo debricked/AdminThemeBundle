@@ -57,7 +57,7 @@ class BreadcrumbController extends EmitterController
      */
     protected function buildKnpBreadcrumbs(Request $request)
     {
-        return $this->render('AvanzuAdminThemeBundle:Breadcrumb:knp-breadcrumb.html.twig');
+        return $this->render('@AvanzuAdminTheme/Breadcrumb/knp-breadcrumb.html.twig');
     }
 
     /**
