@@ -11,9 +11,9 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.9",
-        "symfony/http-foundation" : ">=2.3",
-        "symfony/http-kernel"  : ">=2.3",
-        "symfony/event-dispatcher" : ">=2.3",
+        "symfony/http-foundation" : "^4.4|^5.1",
+        "symfony/http-kernel"  : "^4.4|^5.1",
+        "symfony/event-dispatcher" : "^4.4|^5.1",
         "almasaeed2010/adminlte": "~2.3.0"
     },
     "require-dev": {
@@ -25,5 +25,4 @@
     "autoload": {
         "psr-4": { "Avanzu\\AdminThemeBundle\\": "" }
     }
-
 }

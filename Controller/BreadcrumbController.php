@@ -83,7 +83,7 @@ class BreadcrumbController extends EmitterController
 
 
         return $this->render(
-            'AvanzuAdminThemeBundle:Breadcrumb:breadcrumb.html.twig',
+            '@AvanzuAdminTheme/Breadcrumb/breadcrumb.html.twig',
             array(
                 'active' => $list,
                 'title'  => $title,

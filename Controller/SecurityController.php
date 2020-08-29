@@ -32,7 +32,7 @@ class SecurityController extends Controller
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render(
-            'AvanzuAdminThemeBundle:Security:login.html.twig',
+            '@AvanzuAdminTheme/Security/login.html.twig',
             array(
                 // last username entered by the user
                 'last_username' => $lastUsername,

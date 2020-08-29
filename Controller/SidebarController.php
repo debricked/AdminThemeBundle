@@ -30,7 +30,7 @@ class SidebarController extends EmitterController
 
         $userEvent = $this->triggerMethod(ThemeEvents::THEME_SIDEBAR_USER, new ShowUserEvent());
 
-        return $this->render('AvanzuAdminThemeBundle:Sidebar:user-panel.html.twig',array( 'user' => $userEvent->getUser() ));
+        return $this->render('@AvanzuAdminTheme/Sidebar/user-panel.html.twig',array( 'user' => $userEvent->getUser() ));
     }
 
 
@@ -39,7 +39,7 @@ class SidebarController extends EmitterController
      */
     public function searchFormAction()
     {
-        return $this->render('AvanzuAdminThemeBundle:Sidebar:search-form.html.twig', array());
+        return $this->render('@AvanzuAdminTheme/Sidebar/search-form.html.twig', array());
     }
 
     /**
@@ -70,7 +70,7 @@ class SidebarController extends EmitterController
 
         $event   = $this->triggerMethod(ThemeEvents::THEME_SIDEBAR_SETUP_MENU,new SidebarMenuEvent($request));
 
-        return $this->render('AvanzuAdminThemeBundle:Sidebar:menu.html.twig', array('menu' => $event->getItems()) );
+        return $this->render('@AvanzuAdminTheme/Sidebar/menu.html.twig', array('menu' => $event->getItems()) );
     }
 
     /**
@@ -80,6 +80,6 @@ class SidebarController extends EmitterController
      */
     protected  function buildKnpMenu(Request $request)
     {
-        return $this->render('AvanzuAdminThemeBundle:Sidebar:knp-menu.html.twig', array('menu' => 'main') );
+        return $this->render('@AvanzuAdminTheme/Sidebar/knp-menu.html.twig', array('menu' => 'main') );
     }
 }

@@ -35,7 +35,7 @@ class NavbarController extends EmitterController
         $listEvent = $this->triggerMethod(ThemeEvents::THEME_NOTIFICATIONS, new NotificationListEvent($max));
 
         return $this->render(
-            'AvanzuAdminThemeBundle:Navbar:notifications.html.twig',
+            '@AvanzuAdminTheme/Navbar/notifications.html.twig',
             array(
 
                 'notifications' => $listEvent->getNotifications(),
@@ -60,7 +60,7 @@ class NavbarController extends EmitterController
         $listEvent = $this->triggerMethod(ThemeEvents::THEME_MESSAGES, new MessageListEvent($max));
 
         return $this->render(
-            'AvanzuAdminThemeBundle:Navbar:messages.html.twig',
+            '@AvanzuAdminTheme/Navbar/messages.html.twig',
             array(
                 'messages' => $listEvent->getMessages(),
                 'total'    => $listEvent->getTotal(),
@@ -83,7 +83,7 @@ class NavbarController extends EmitterController
         $listEvent = $this->triggerMethod(ThemeEvents::THEME_TASKS, new TaskListEvent($max));
 
         return $this->render(
-            'AvanzuAdminThemeBundle:Navbar:tasks.html.twig',
+            '@AvanzuAdminTheme/Navbar/tasks.html.twig',
             array(
                 'tasks' => $listEvent->getTasks(),
                 'total' => $listEvent->getTotal(),
@@ -106,7 +106,7 @@ class NavbarController extends EmitterController
 
         if ($userEvent instanceof ShowUserEvent) {
             return $this->render(
-                'AvanzuAdminThemeBundle:Navbar:user.html.twig',
+                '@AvanzuAdminTheme/Navbar/user.html.twig',
                 [
                     'user'            => $userEvent->getUser(),
                     'links'           => $userEvent->getLinks(),
