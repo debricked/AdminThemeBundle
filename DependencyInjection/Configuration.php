@@ -2,9 +2,6 @@
 
 namespace Avanzu\AdminThemeBundle\DependencyInjection;
 
-use Avanzu\AdminThemeBundle\Controller\BreadcrumbController;
-use Avanzu\AdminThemeBundle\Controller\NavbarController;
-use Avanzu\AdminThemeBundle\Controller\SidebarController;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -20,8 +17,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('avanzu_admin_theme');
+        $treeBuilder = new TreeBuilder('avanzu_admin_theme');
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode->children()
                     ->arrayNode('theme')
