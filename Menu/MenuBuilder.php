@@ -12,8 +12,7 @@ use Avanzu\AdminThemeBundle\Event\KnpMenuEvent;
 use Avanzu\AdminThemeBundle\Event\ThemeEvents;
 use Avanzu\AdminThemeBundle\Routing\RouteAliasCollection;
 use Knp\Menu\FactoryInterface;
-use Symfony\Component\EventDispatcher\EventDispatcher;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 class MenuBuilder
 {
@@ -64,8 +63,8 @@ class MenuBuilder
         );
 
         $this->eventDispatcher->dispatch(
-            ThemeEvents::THEME_SIDEBAR_SETUP_KNP_MENU,
-           new KnpMenuEvent( $menu, $this->factory, $options, $childOptions )
+            new KnpMenuEvent( $menu, $this->factory, $options, $childOptions ),
+            ThemeEvents::THEME_SIDEBAR_SETUP_KNP_MENU
         );
 
 
